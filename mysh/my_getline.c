@@ -12,7 +12,7 @@ ssize_t my_getline(char **lineptr, size_t *n, FILE *stream)
 {
 	size_t str_len = 0;
 	size_t str_size = *n;
-	int nread;
+	char nread;
 	char *temp;
 
 	if (*lineptr == NULL) /* alloc memory to line buffer */
@@ -25,7 +25,7 @@ ssize_t my_getline(char **lineptr, size_t *n, FILE *stream)
 	} /* read input till EOF or newline is encountered */
 	while ((nread = fgetc(stream)) != EOF && nread != '\n')
 	{
-		(*lineptr)[str_len++] = (char)nread; /* append input chars to line buffer */
+		(*lineptr)[str_len++] = nread; /* append input chars to line buffer */
 
 		if (str_len == str_size) /* double line buffer cap if full */
 		{
