@@ -1,2 +1,2 @@
-# projects
-Personal Projects in my journey as a software engineer
+# Trestle projects
+Projects in the Trestle AI/ML Track
